@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CGULib;
 using CGULib.Classes;
+using CGULib.Containers;
+using CGULib.Statics.Voronoi;
 
 namespace ConsoleTest
 {
@@ -11,11 +12,32 @@ namespace ConsoleTest
     {
         static void Main(string[] args)
         {
-            DCEL<Vector2> dcel = new DCEL<Vector2>("test", "this is a test");
+            Test root;
+            root = new Test(10);
 
-            List<VectorBase> vectors = new List<VectorBase>();
-            vectors.Add(new Vector2(3.0d, 4.5d));
-            dcel.AddVertex(vectors[0] as Vector2);
+            for (int i = 5; i >= 0; i--)
+                root = root.Insert(root, new Test(i)) as Test;
+
+            while (root != null)
+            {
+                Test temp = root.Min(root) as Test;
+                root = root.Delete(root, temp) as Test;
+                Console.WriteLine(temp.Key);
+            }
+
+            Console.ReadLine();
+        }
+    }
+
+    class Test : AVLNode<int>
+    {
+        public Test(int key) : base(key)
+        {
+        }
+
+        public override int CompareTo(int other)
+        {
+            return key.CompareTo(other);
         }
     }
 }

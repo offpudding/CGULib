@@ -1,0 +1,6 @@
+C:\Users\OffPudding\source\repos\CGULib\CGULib\bin\Debug\CGULib.dll
+C:\Users\OffPudding\source\repos\CGULib\CGULib\bin\Debug\CGULib.pdb
+C:\Users\OffPudding\source\repos\CGULib\CGULib\obj\Debug\CGULib.csprojResolveAssemblyReference.cache
+C:\Users\OffPudding\source\repos\CGULib\CGULib\obj\Debug\CGULib.csproj.CoreCompileInputs.cache
+C:\Users\OffPudding\source\repos\CGULib\CGULib\obj\Debug\CGULib.dll
+C:\Users\OffPudding\source\repos\CGULib\CGULib\obj\Debug\CGULib.pdb
